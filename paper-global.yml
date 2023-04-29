@@ -31,6 +31,7 @@ chunk-loading:
   # on server and a minor delay on rtp for all chunks in the distance
 
   ## Will need to see if these values work. Seems proper, but in practice this might work differently.
+  # DAVE: Agree, it is a best guess, MC is highly complex but something we can monitor and an easy revert with no major reprocussions other than a bit of slow laoding if it doesn't
 
   player-max-concurrent-loads: 20.0
   target-player-chunk-send-rate: 100.0

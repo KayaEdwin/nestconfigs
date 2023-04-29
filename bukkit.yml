@@ -11,8 +11,7 @@ settings:
   shutdown-message: The Nest is restarting, check back in 1 minute!
   minimum-api: none
 
-  # Most spawn limits are lower that suggested in optimisation guides so not much savings to be had here 
-  ##(could be increased if FarmLimiter and other measures are taken)
+#FUTURE - review an increase after farmlimiter plugin
 spawn-limits:
   axolotls: 2
   water-underground-creature: 1
