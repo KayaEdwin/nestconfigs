@@ -1,66 +1,32 @@
-# This is the main configuration file for Bukkit.
-# As you can see, there's actually not that much to configure without any plugins.
-# For a reference for any variable inside this file, check out the Bukkit Wiki at
-# https://www.spigotmc.org/go/bukkit-yml
-#
-# If you need help on this file, feel free to join us on irc or leave a message
-# on the forums asking for advice.
-#
-# IRC: #spigot @ irc.spi.gt
-#    (If this means nothing to you, just go to https://www.spigotmc.org/go/irc )
-# Forums: https://www.spigotmc.org/
-# Bug tracker: https://www.spigotmc.org/go/bugs
-
-# Other useful info: https://xgamingserver.com/blog/how-to-configure-your-minecraft-server-bukkit-yml/
-#                    https://shockbyte.com/billing/knowledgebase/154/Optimizing-bukkityml-to-Reduce-Lag.html
-
 settings:
   use-map-color-cache: true
   allow-end: false
   warn-on-overload: true
   permissions-file: permissions.yml
   update-folder: update
-
-  # Potentially a useful option to debug any plugin issues if tools not available elsewhere
   plugin-profiling: false
-
-  #ms
   connection-throttle: 4000
-
-
   query-plugins: true
   deprecated-verbose: default
   shutdown-message: The Nest is restarting, check back in 1 minute!
   minimum-api: none
 
-  # Most spawn limits are lower that suggested in optimisation guides so not much savings to be had here
+  # Most spawn limits are lower that suggested in optimisation guides so not much savings to be had here 
+  ##(could be increased if FarmLimiter and other measures are taken)
 spawn-limits:
   axolotls: 2
   water-underground-creature: 1
-
-  #Default is 70 in vanilla
   monsters: 17
-
-  #Default is 15 in Vanilla
-  animals: 3
-
+  animals: 4
   water-animals: 3
   water-ambient: 9
-
-  #bats
   ambient: 0
-chunk-gc:
-  # How quickly empty chunks are unloaded from the server.
-  # Reccommended to lower so unused chucks are removed faster given the amount of fly used and travel
-  
-  #CHANGED - Original 600
-  period-in-ticks: 400
 
+chunk-gc:
+  period-in-ticks: 400
 
 ticks-per:
   animal-spawns: 400
-
-#CHANGE: originally 10 - from optimisation guide - "  This option sets how often (in ticks) the server attempts to spawn certain living entities... As for monsters: Slightly increasing the time between spawns should not impact spawn rates even in mob farms."
   monster-spawns: 10
   water-spawns: 100
   water-ambient-spawns: 20
@@ -68,4 +34,5 @@ ticks-per:
   axolotl-spawns: 400
   ambient-spawns: 400
   autosave: 6000
+
 aliases: now-in-commands.yml
