@@ -1,14 +1,5 @@
-# Pufferfish Configuration
-# Check out Pufferfish Host for maximum performance server hosting: https://pufferfish.host
-# Join our Discord for support: https://discord.gg/reZw4vQV9H
-# Download new builds at https://ci.pufferfish.host/job/Pufferfish
-# Useful info : https://github.com/YouHaveTrouble/minecraft-optimization
 info:
   version: '1.0'
-# These values define a entity's maximum lifespan. If an
-# entity is in this list and it has survived for longer than
-# that number of ticks, then it will be removed. Setting a value to
-# -1 disables this feature.
 entity_timeouts:
   SNOWBALL: -1
   LLAMA_SPIT: -1
@@ -16,8 +7,6 @@ sentry-dsn: ''
 enable-books: true
 enable-suffocation-optimization: true
 enable-async-mob-spawning: true
-# Optimizes entity brains when
-# they're far away from the player
 dab:
   enabled: true
   start-distance: 12
@@ -25,16 +14,13 @@ dab:
   activation-dist-mod: 8
   blacklisted-entities: []
 
-# CHANGED - was false - Optimisation guide suggests enabling this, gives a few percentage performance gain with only a minor gameplay implications(although doesn't say what)
-# One to keep an eye on if mob farms break given lack of info on the gmaeplay effects.
-inactive-goal-selector-throttle: true
+##Set to FALSE. I was a Moderator on Purpur's Discord for a while, and this setting caused zombified piglin farms and alike farms to stop working.
+inactive-goal-selector-throttle: false
 
-
-# Settings for things that don't belong elsewhere
 misc:
   disable-method-profiler: true
   disable-out-of-order-chat: true
-# Optimizes projectile settings
+
 projectile:
   max-loads-per-tick: 10
   max-loads-per-projectile: 10
