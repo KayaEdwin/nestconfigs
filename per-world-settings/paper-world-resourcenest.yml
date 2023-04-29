@@ -313,8 +313,7 @@ spawn:
   keep-spawn-loaded: false
   keep-spawn-loaded-range: 10
 
-# I have not changed this but guides are suggesting changing behavior.villager.validatenearbypoi to 60 as it can have a massive impact. I don't however know the reprocussions on having this change and can't find it documented yet. COuld be worth a test though given how much impact villagers have.
-## I know most of the impacts these sensors and behaviours can have. We can use Spark to see which sensors take most, and adjust accordingly. This goes for all mobs.
+#FUTURE 
 tick-rates:
   behavior:
     villager:

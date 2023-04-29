@@ -98,6 +98,7 @@ world-settings:
       
     # A potential performance saving could come from customising this per world and reducing distances for resource worlds. This does however come with a minor cost in gaming experience from mobs not reacting until closer. A target that cis likley unnoticable for change in resource world is villagers but only a small number of interactions
     ##This will be worth it, we can change this for resource worlds.
+    #DAVE: Agree, personally I think for resource worlds I would have everything other than mosters and flying as 16, Monsters 24
     entity-activation-range:
       animals: 16
       monsters: 32
@@ -172,6 +173,7 @@ world-settings:
     # Customising these per world so that entities/tiles in resource world skip sooner than main worlds may be reasonable.
     # An optimisation guide I am reading suggests placing these to high values to effectivley disable th functionality so not on obvious change, would be useful to know how often this is triggered
     ## Leaving you to take a look at this with the provided data.
+    #DAVE: Will review and see if anything that easy an easy improvement
     max-tick-time:
       tile: 50
       entity: 50
@@ -180,7 +182,6 @@ world-settings:
 
     # Default appears to be 10 in chunks from the player. 160 blocks in all directions. This may be low hanging fruit to gain perfomance if things became critical but would impact gameplay
     # Given spawn radius is max 64 blocks and no one should have redstone or other contraptions inside resource worlds reducing this for resource world potentially to 5, 6 or 7 could be a decent saving
-    ## Paper handles this per world. I'll upload the per-world files here, too.
     simulation-distance: default
     thunder-chance: 100000
     enable-zombie-pigmen-portal-spawns: true
@@ -201,7 +202,6 @@ world-settings:
       hopper-transfer: 80
       hopper-check: 10
    ResourceNest_Nether:
-    ## CHANGE renamed to fit naming of world.
     view-distance: 7
     simulation-distance: 2
     item-despawn-rate: 3000

@@ -1,6 +1,7 @@
 _version: 30
 anticheat:
   anti-xray:
+    #DAVE: If ever enabled the hidden can be tuned per world to save resources
     enabled: false
     engine-mode: 1
     hidden-blocks:
@@ -135,6 +136,16 @@ entities:
     # NO CHANGE but a potential area with lots of entity savings. YOu can tune despawn time per dropped item to make tehm despawn faster potentially saving lots of resources from left over items
     # Suggest cobblestone, carpets and rails be added with fairly short times for handling issues with dupers. a guide has a list of suggestions most at 15 seconds despawn time which may be slightly aggressive but many items could probably be done to the 1 minute mark rather than 5 if we wanted - https://github.com/YouHaveTrouble/minecraft-optimization
     ## I think this can be worth the while. I'll copy in the values The Spot used here, but commented. I don't think these necessarily make sense, but can be a starting point.
+    #DAVE: Agree, most of these are set at 2.5 minutes which for common items like dirt seems more than reasonable, plenty of time to dig and collect
+    #      For items such as rails and carpet 30 (600) seems not unreasonable?
+    #      The only item I am not sure about it cobblestone and basalt, you can get a massive build up from a cobble generator if thigs go wrong or over flow but
+    #      people also mine it manually. Perhaps a minute would be not unreasonable? This would be about 1500 items on a modest generator and anything beyond that is
+    #      user education
+    # 
+    #      Will try to find a full list and go through items see which might be easy savings.
+
+
+    #FUTURE Update with timings per item type, potential to customise per world depending on drops
       enabled: true
       items:
         netherrack: 1200
@@ -308,8 +319,7 @@ spawn:
   keep-spawn-loaded: false
   keep-spawn-loaded-range: 10
 
-# I have not changed this but guides are suggesting changing behavior.villager.validatenearbypoi to 60 as it can have a massive impact. I don't however know the reprocussions on having this change and can't find it documented yet. COuld be worth a test though given how much impact villagers have.
-## I know most of the impacts these sensors and behaviours can have. We can use Spark to see which sensors take most, and adjust accordingly. This goes for all mobs.
+#FUTURE: Review usuage via spark and tune rates as appropriate
 tick-rates:
   behavior:
     villager:

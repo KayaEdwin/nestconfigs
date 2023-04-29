@@ -14,7 +14,6 @@ dab:
   activation-dist-mod: 8
   blacklisted-entities: []
 
-##Set to FALSE. I was a Moderator on Purpur's Discord for a while, and this setting caused zombified piglin farms and alike farms to stop working.
 inactive-goal-selector-throttle: false
 
 misc:
