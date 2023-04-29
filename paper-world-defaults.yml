@@ -1,17 +1,3 @@
-# This is the world defaults configuration file for Paper.
-# As you can see, there's a lot to configure. Some options may impact gameplay, so use
-# with caution, and make sure you know what each option does before configuring.
-# 
-# If you need help with the configuration or have any questions related to Paper,
-# join us in our Discord or check the docs page.
-# 
-# Configuration options here apply to all worlds, unless you specify overrides inside
-# the world-specific config file inside each world folder.
-# 
-# Docs: https://docs.papermc.io/
-# Discord: https://discord.gg/papermc
-# Website: https://papermc.io/
-
 _version: 30
 anticheat:
   anti-xray:
@@ -47,25 +33,17 @@ anticheat:
     - deepslate
     update-radius: 2
     use-permission: false
+
   obfuscation:
     items:
       hide-durability: false
       hide-itemmeta: false
       hide-itemmeta-with-visual-effects: false
+
 chunks:
   auto-save-interval: default
   delay-chunk-unloads-by: 10s
-  
-  # CHANGE - taking set from optimisation gude and commenting this out for reference.
-  # This option controls how many of each type of entity are save for a chunk, with -1 values an infinite amount of arrows could be saved and loaded, the ones from the guides below seem more than reasonable to have in a single chunk
   entity-per-chunk-save-limit:
-    #arrow: -1
-    #ender_pearl: -1
-    #experience_orb: -1
-    #fireball: -1
-    #small_fireball: -1
-    #snowball: -1
-    
     area_effect_cloud: 8
     arrow: 16
     dragon_fireball: 3
@@ -86,11 +64,7 @@ chunks:
     wither_skull: 4
     
   fixed-chunk-inhabited-time: -1
- 
-  # CHANGE -  Guides recommend changing this to as low as 8 for 20-30 player servers, changing from 24 to 16 seems like a reasonable compromise given player counts, nothing is lost but "If incremental save can't finish in time then bukkit will automatically save leftover chunks at once and begin the process again." so too low can force a bigger update.
   max-auto-save-chunks-per-tick: 16
-
-
   prevent-moving-into-unloaded-chunks: true
 collisions:
   allow-player-cramming-damage: false
@@ -160,13 +134,37 @@ entities:
     alt-item-despawn-rate:
     # NO CHANGE but a potential area with lots of entity savings. YOu can tune despawn time per dropped item to make tehm despawn faster potentially saving lots of resources from left over items
     # Suggest cobblestone, carpets and rails be added with fairly short times for handling issues with dupers. a guide has a list of suggestions most at 15 seconds despawn time which may be slightly aggressive but many items could probably be done to the 1 minute mark rather than 5 if we wanted - https://github.com/YouHaveTrouble/minecraft-optimization
+    ## I think this can be worth the while. I'll copy in the values The Spot used here, but commented. I don't think these necessarily make sense, but can be a starting point.
       enabled: true
       items:
         netherrack: 1200
+        #andesite: 3000
+        #bamboo: 3000
+        #beetroot_seeds: 3000
+        #cactus: 2400
+        #cobblestone: 3000
+        #diorite: 3000
+        #dirt: 2400
+        #golden_sword: 2400
+        #granite: 3000
+        #grass: 3000
+        #gravel: 3000
+        #kelp: 2400
+        #melon_seeds: 3000
+        #melon_slice: 3000
+        #netherrack: 2400
+        #pumpkin: 3000
+        #pumpkin_seeds: 3000
+        #red_sand: 3000
+        #rotten_flesh: 2400
+        #sand: 3000
+        #sugar_cane: 3000
+        #sweet_berries: 3000
+        #twisting_vines: 3000
+        #weeping_vines: 3000
+        #wheat_seeds: 3000
     count-all-mobs-for-spawning: false
     creative-arrow-despawn-rate: default
-
-    # A range of options in optimization guides, seems like the soft limit is usually higher(30 is common) and then the hard limit is based on spawn ranges whihc 64 matches. Not changing the soft limits as would be a negative effect
     despawn-ranges:
       ambient:
         hard: 64
@@ -205,10 +203,7 @@ entities:
     - SleepingZ
     iron-golems-can-spawn-in-air: false
     monster-spawn-max-light-level: -1
-
-    #CHANGE - originally - default - From optimisation guides, non player arrows can't be picked up so remove them from world after 20 ticks(1 second) to save entities on the server
     non-player-arrow-despawn-rate: 20
-
     per-player-mob-spawns: true
     scan-for-legacy-ender-dragon: true
     skeleton-horse-thunder-spawn-chance: default
@@ -304,8 +299,6 @@ misc:
   redstone-implementation: VANILLA
   shield-blocking-delay: 5
   show-sign-click-command-failure-msgs-to-player: false
-
-  #CHANGE - from optimisation guides originally true - "Disabling this will result in less pathfinding being done, increasing performance. In some cases this will cause mobs to appear more laggy; They will just passively update their path every 5 ticks (0.25 sec)."
   update-pathfinding-on-block-update: false
 scoreboards:
   allow-non-player-entities-on-scoreboards: false
@@ -316,12 +309,12 @@ spawn:
   keep-spawn-loaded-range: 10
 
 # I have not changed this but guides are suggesting changing behavior.villager.validatenearbypoi to 60 as it can have a massive impact. I don't however know the reprocussions on having this change and can't find it documented yet. COuld be worth a test though given how much impact villagers have.
+## I know most of the impacts these sensors and behaviours can have. We can use Spark to see which sensors take most, and adjust accordingly. This goes for all mobs.
 tick-rates:
   behavior:
     villager:
       validatenearbypoi: -1
   container-update: 1
-  #CHANGE was 1 - recommended change from guide, slightly slows down the rate of spread but not in a noticable way as to cause issues
   grass-spread: 4
   mob-spawner: 1
   sensor:
