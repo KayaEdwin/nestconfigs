@@ -19,11 +19,7 @@ settings:
   player-shuffle: 0
   user-cache-size: 1000
   save-user-cache-on-stop-only: false
-
-# Different from default - Default: 0.0625 - not performance related
   moved-wrongly-threshold: 20
-
-# Different from default - Default: 10
   moved-too-quickly-multiplier: 1.0
   timeout-time: 60
   restart-on-crash: true
@@ -74,11 +70,7 @@ world-settings:
     seed-mineshaft: default
     hopper-can-load-chunks: false
     verbose: false
-
-#Given that the server is always after 1.18 this is likely unneeded but can't find anything to indicate it would have any impact on performance
     below-zero-generation-in-existing-chunks: true
-
-# Allowed to customise per world but no perfornace boost
     growth:
       cactus-modifier: 100
       cane-modifier: 100
@@ -101,30 +93,19 @@ world-settings:
       cavevines-modifier: 100
       glowberry-modifier: 100
     merge-radius:
-      # Different from default - Default: 3.0, the higher value should improve performance
-      #CHANGE Guides are reccommending slightly higher values - originally 4 - don't see any issues getting caused so minor potential improvement with fewer entities
       exp: 6.0
-      
-       # Different from default - Default: 2.5, the higher value should improve performance
-       #CHANGE Guides are reccommending slightly higher values - originally 3 - don't see any issues getting caused so minor potential improvement with fewer entities
       item: 4.0
       
     # A potential performance saving could come from customising this per world and reducing distances for resource worlds. This does however come with a minor cost in gaming experience from mobs not reacting until closer. A target that cis likley unnoticable for change in resource world is villagers but only a small number of interactions
-    
+    ##This will be worth it, we can change this for resource worlds.
     entity-activation-range:
-   
-      # Different from default - Default: 32. lower value should be improving the performance
-      #CHANGED - original 18 optimisation guides recommend 16, should be minor improvement.
       animals: 16
-
       monsters: 32
       raiders: 24
       misc: 12
       water: 16
       villagers: 32
       flying-monsters: 32
-
-# From paper but can't find full congig info
       wake-up-inactive:
         animals-max-per-tick: 4
         animals-every: 1200
@@ -143,9 +124,6 @@ world-settings:
       villagers-active-for-panic: true
       tick-inactive-villagers: false
       ignore-spectators: false
-
-    # Slightly different to default in spigot documentation but no real performance impact, mainly effects client side
-    # Optimisation guides have some lower, some higher but all similar, unlikley a worthwhile change
     entity-tracking-range:
       players: 64
       animals: 48
@@ -189,9 +167,11 @@ world-settings:
     # Changing these values can give a performance increase if updates are hitting the 50ms mark regularly.
     # According to wiki changing entity time should have no affect on gameplay behaviour but entities could appear to lag/stutter if they start passing the value often and getting skipped
     # Are statistics available for if the server runs close to these limits often?
+    ## These statistics are available. I've sent them to you.
     # Potentially chainging entities to slightly lower could help performance when server is struggling
     # Customising these per world so that entities/tiles in resource world skip sooner than main worlds may be reasonable.
     # An optimisation guide I am reading suggests placing these to high values to effectivley disable th functionality so not on obvious change, would be useful to know how often this is triggered
+    ## Leaving you to take a look at this with the provided data.
     max-tick-time:
       tile: 50
       entity: 50
@@ -200,26 +180,19 @@ world-settings:
 
     # Default appears to be 10 in chunks from the player. 160 blocks in all directions. This may be low hanging fruit to gain perfomance if things became critical but would impact gameplay
     # Given spawn radius is max 64 blocks and no one should have redstone or other contraptions inside resource worlds reducing this for resource world potentially to 5, 6 or 7 could be a decent saving
+    ## Paper handles this per world. I'll upload the per-world files here, too.
     simulation-distance: default
     thunder-chance: 100000
     enable-zombie-pigmen-portal-spawns: true
     wither-spawn-sound-radius: 0
-
-    #CHANGE - reccomended in guides to half this value as arrows are rarely picked up or are from infinity bows so that number of entities is lower. Original value - 600 - don't see any major downsides given how many arrows are avaialbel on the server
     arrow-despawn-rate: 300
-
     trident-despawn-rate: 6000
-
-    # Not stated in documentation what the value of -1 does specifically but assuming disables.
     hanging-tick-frequency: -1
     zombie-aggressive-towards-villager: true
     nerf-spawner-mobs: false
     mob-spawn-range: 4
     end-portal-sound-radius: 0
-
-  # A potential reduction in server usage would be to limit the view-distance in the resource worls slightly, currently the global setting is default which is 10. This means from a stationary position a player requires the server to load 314 chunks to view. By reducing this to 8 this changes to 201 or 7 is 153. For resource work halfing the loads for 3 chunks range seems more than acceptable.
   Resourcenest:
-    #CHANGE added view-distance set to 7
     view-distance: 7
     simulation-distance: 2
     item-despawn-rate: 3000
@@ -227,11 +200,8 @@ world-settings:
     ticks-per:
       hopper-transfer: 80
       hopper-check: 10
-  
-  #CHANGED
-  # Should have custom setting for resource nether to match resourcenest
-   Resourcenether:
-    #CHANGE added view-distance set to 7
+   ResourceNest_Nether:
+    ## CHANGE renamed to fit naming of world.
     view-distance: 7
     simulation-distance: 2
     item-despawn-rate: 3000
