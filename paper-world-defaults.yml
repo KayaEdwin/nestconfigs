@@ -1,7 +1,6 @@
 _version: 30
 anticheat:
   anti-xray:
-    #DAVE: If ever enabled the hidden can be tuned per world to save resources
     enabled: false
     engine-mode: 1
     hidden-blocks:
@@ -115,7 +114,7 @@ entities:
         ticks: 12000
       start:
         day: 5
-        per-player: false
+        per-player: true
     player-insomnia-start-ticks: 144000
     should-remove-dragon: false
     spawner-nerfed-mobs-should-jump: false
@@ -133,47 +132,11 @@ entities:
   spawning:
     all-chunks-are-slime-chunks: false
     alt-item-despawn-rate:
-    # NO CHANGE but a potential area with lots of entity savings. YOu can tune despawn time per dropped item to make tehm despawn faster potentially saving lots of resources from left over items
-    # Suggest cobblestone, carpets and rails be added with fairly short times for handling issues with dupers. a guide has a list of suggestions most at 15 seconds despawn time which may be slightly aggressive but many items could probably be done to the 1 minute mark rather than 5 if we wanted - https://github.com/YouHaveTrouble/minecraft-optimization
-    ## I think this can be worth the while. I'll copy in the values The Spot used here, but commented. I don't think these necessarily make sense, but can be a starting point.
-    #DAVE: Agree, most of these are set at 2.5 minutes which for common items like dirt seems more than reasonable, plenty of time to dig and collect
-    #      For items such as rails and carpet 30 (600) seems not unreasonable?
-    #      The only item I am not sure about it cobblestone and basalt, you can get a massive build up from a cobble generator if thigs go wrong or over flow but
-    #      people also mine it manually. Perhaps a minute would be not unreasonable? This would be about 1500 items on a modest generator and anything beyond that is
-    #      user education
-    # 
-    #      Will try to find a full list and go through items see which might be easy savings.
-
-
     #FUTURE Update with timings per item type, potential to customise per world depending on drops
+    ##FUTURE Kaya - Removed SPOT items, excited to see your PR.
       enabled: true
       items:
         netherrack: 1200
-        #andesite: 3000
-        #bamboo: 3000
-        #beetroot_seeds: 3000
-        #cactus: 2400
-        #cobblestone: 3000
-        #diorite: 3000
-        #dirt: 2400
-        #golden_sword: 2400
-        #granite: 3000
-        #grass: 3000
-        #gravel: 3000
-        #kelp: 2400
-        #melon_seeds: 3000
-        #melon_slice: 3000
-        #netherrack: 2400
-        #pumpkin: 3000
-        #pumpkin_seeds: 3000
-        #red_sand: 3000
-        #rotten_flesh: 2400
-        #sand: 3000
-        #sugar_cane: 3000
-        #sweet_berries: 3000
-        #twisting_vines: 3000
-        #weeping_vines: 3000
-        #wheat_seeds: 3000
     count-all-mobs-for-spawning: false
     creative-arrow-despawn-rate: default
     despawn-ranges:
@@ -279,11 +242,7 @@ fixes:
   tnt-entity-height-nerf: disabled
 hopper:
   cooldown-when-full: true
-  disable-move-event: false
-  disable-move-event-quickshop-tips: QuickShop automatic disabled this due it will
-    allow other players steal items from shop. This notice only shown when have shops
-    in current world and hopper protection is on and also disable-move-event turned
-    on.
+  disable-move-event: true
   ignore-occluding-blocks: false
 lootables:
   auto-replenish: false
@@ -303,11 +262,12 @@ max-growth-height:
   reeds: 3
 misc:
   disable-end-credits: false
-  disable-relative-projectile-velocity: false
+  disable-relative-projectile-velocity: true
   disable-sprint-interruption-on-attack: false
   light-queue-size: 20
   max-leash-distance: 10.0
   redstone-implementation: VANILLA
+  #FUTURE - might change this, I've not had issues with Eigencraft. Link: https://docs.papermc.io/paper/reference/world-configuration#redstone-implementation
   shield-blocking-delay: 5
   show-sign-click-command-failure-msgs-to-player: false
   update-pathfinding-on-block-update: false
