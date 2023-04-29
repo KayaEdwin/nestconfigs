@@ -1,0 +1,153 @@
+# This is the global configuration file for Paper.
+# As you can see, there's a lot to configure. Some options may impact gameplay, so use
+# with caution, and make sure you know what each option does before configuring.
+# 
+# If you need help with the configuration or have any questions related to Paper,
+# join us in our Discord or check the docs page.
+# 
+# The world configuration options have been moved inside
+# their respective world folder. The files are named paper-world.yml
+# 
+# Docs: https://docs.papermc.io/
+# Discord: https://discord.gg/papermc
+# Website: https://papermc.io/
+
+_version: 28
+chunk-loading:
+  autoconfig-send-distance: true
+  enable-frustum-priority: false
+  global-max-chunk-load-rate: -1.0
+  global-max-chunk-send-rate: -1.0
+  global-max-concurrent-loads: 500.0
+  max-concurrent-sends: 2
+  min-load-radius: 2
+
+  #CHANGED see comment below
+  player-max-chunk-load-rate: 100
+
+  ## Max concurrent rate per player limits the
+  ## concurrent on the server but not the total rate at which a player is
+  ## loading chunks up to the point where the server is max CPU/IO if a
+  ## player is travelling fast enough. Players with elytra will be
+  ## travelling roughly 2 chunks per second, ice roads are faster still.
+  ## This means each player can load upto 40 chunks per second while flying
+  ## and can load up 314 after rtp at whatever the max rate the server can
+  ## handle 20 at a time.
+
+  ## Suggest implementing a max load rate for players, this will likely reduce issues
+  ## with rtp causing huge load spikes and when flying(chunks should be loaded
+  ## in a sane order closest first but not finding documentation) Added a
+  ## rate per player of 100 above, this means after an rtp whole 314 area
+  ## is loaded in ~3 seconds, this lines up with the send rate of 100 below
+  ## so player can't load more chunks in a second than can be sent to them
+  ## and is far faster than a flying player can travel under normal
+  ## circumstance. Performance and effect on server will have to be
+  ## judged with such a change but seems like it might help especially
+  ## when under load, actual effect most of the time will likely be 0
+  ## on server and a minor delay on rtp for all chunks in the distance
+
+  player-max-concurrent-loads: 20.0
+  target-player-chunk-send-rate: 100.0
+chunk-system:
+  gen-parallelism: default
+  io-threads: -1
+  worker-threads: -1
+collisions:
+  enable-player-collisions: false
+  send-full-pos-for-hard-colliding-entities: true
+commands:
+  fix-target-selector-tag-completion: true
+  suggest-player-names-when-null-tab-completions: true
+  time-command-affects-all-worlds: false
+console:
+  enable-brigadier-completions: true
+  enable-brigadier-highlighting: true
+  has-all-permissions: false
+item-validation:
+  book:
+    author: 8192
+    page: 16384
+    title: 8192
+  book-size:
+    page-max: 2560
+    total-multiplier: 0.98
+  display-name: 8192
+  lore-line: 8192
+  resolve-selectors-in-books: false
+logging:
+  deobfuscate-stacktraces: true
+  log-player-ip-addresses: true
+  use-rgb-for-named-text-colors: true
+messages:
+  kick:
+    authentication-servers-down: <lang:multiplayer.disconnect.authservers_down>
+    connection-throttle: Connection throttled! Please wait before reconnecting.
+    flying-player: <lang:multiplayer.disconnect.flying>
+    flying-vehicle: <lang:multiplayer.disconnect.flying>
+  no-permission: <red>I'm sorry, but you do not have permission to perform this command.
+    Please contact the server administrators if you believe that this is in error.
+  use-display-name-in-quit-message: false
+misc:
+  chat-threads:
+    chat-executor-core-size: -1
+    chat-executor-max-size: -1
+  fix-entity-position-desync: true
+  lag-compensate-block-breaking: true
+  load-permissions-yml-before-plugins: true
+  max-joins-per-tick: 5
+  region-file-cache-size: 256
+  strict-advancement-dimension-check: false
+  use-alternative-luck-formula: false
+  use-dimension-type-for-custom-spawners: false
+packet-limiter:
+  all-packets:
+    action: KICK
+    interval: 1000.0
+    max-packet-rate: 50000.0
+  kick-message: <red><lang:disconnect.exceeded_packet_rate>
+  overrides:
+    ServerboundPlaceRecipePacket:
+      action: DROP
+      interval: 4.0
+      max-packet-rate: 50000.0
+player-auto-save:
+  max-per-tick: -1
+  rate: -1
+proxies:
+  bungee-cord:
+    online-mode: true
+  proxy-protocol: false
+  velocity:
+    enabled: false
+    online-mode: false
+    secret: ''
+scoreboards:
+  save-empty-scoreboard-teams: false
+  track-plugin-scoreboards: false
+spam-limiter:
+  incoming-packet-threshold: 300
+  recipe-spam-increment: 1
+  recipe-spam-limit: 20
+  tab-spam-increment: 1
+  tab-spam-limit: 500
+timings:
+  enabled: false
+  hidden-config-entries:
+  - database
+  - proxies.velocity.secret
+  history-interval: 300
+  history-length: 3600
+  really-enabled: false
+  server-name: Unknown Server
+  server-name-privacy: false
+  url: https://timings.aikar.co/
+  verbose: true
+unsupported-settings:
+  allow-grindstone-overstacking: false
+  allow-headless-pistons: false
+  allow-permanent-block-break-exploits: true
+  allow-piston-duplication: true
+  perform-username-validation: true
+watchdog:
+  early-warning-delay: 1000
+  early-warning-every: 5000

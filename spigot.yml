@@ -1,0 +1,250 @@
+# This is the main configuration file for Spigot.
+# As you can see, there's tons to configure. Some options may impact gameplay, so use
+# with caution, and make sure you know what each option does before configuring.
+# For a reference for any variable inside this file, check out the Spigot wiki at
+# http://www.spigotmc.org/wiki/spigot-configuration/
+#
+# If you need help with the configuration or have any questions related to Spigot,
+# join us at the Discord or drop by our forums and leave a post.
+#
+# Discord: https://www.spigotmc.org/go/discord
+# Forums: http://www.spigotmc.org/
+# useful info: https://shockbyte.com/billing/knowledgebase/153/Optimizing-spigotyml-to-Reduce-Lag.html
+# SOme settings in this file are from paper - https://docs.papermc.io/paper/reference/global-configuration
+
+settings:
+  debug: false
+  sample-count: 12
+  bungeecord: false
+  player-shuffle: 0
+  user-cache-size: 1000
+  save-user-cache-on-stop-only: false
+
+# Different from default - Default: 0.0625 - not performance related
+  moved-wrongly-threshold: 20
+
+# Different from default - Default: 10
+  moved-too-quickly-multiplier: 1.0
+  timeout-time: 60
+  restart-on-crash: true
+  restart-script: ./start.sh
+  netty-threads: 4
+  attribute:
+    maxHealth:
+      max: 2048.0
+    movementSpeed:
+      max: 2048.0
+    attackDamage:
+      max: 2048.0
+  log-villager-deaths: false
+  log-named-deaths: false
+messages:
+  whitelist: The Nest is currently in maintenance! Join our discord at discord.thenestsmp.com
+  unknown-command: '&7Unknown command. Use &8[/guide] &7to access our guide.'
+  server-full: '&7The server is full!'
+  outdated-client: '&7Outdated client! Please use {0}'
+  outdated-server: '&7Outdated server! I''m still on {0}'
+  restart: The Nest&7 is currently restarting.
+advancements:
+  disable-saving: false
+  disabled:
+  - minecraft:story/disabled
+players:
+  disable-saving: false
+commands:
+  spam-exclusions:
+  - /skill
+  silent-commandblock-console: false
+  replace-commands:
+  - setblock
+  - summon
+  - testforblock
+  - tellraw
+  log: true
+  tab-complete: 0
+  send-namespaced: true
+config-version: 12
+stats:
+  disable-saving: false
+  forced-stats: {}
+world-settings:
+  default:
+    seed-ancientcity: <redacted>
+    seed-buriedtreasure: <redacted>
+    seed-mineshaft: default
+    hopper-can-load-chunks: false
+    verbose: false
+
+#Given that the server is always after 1.18 this is likely unneeded but can't find anything to indicate it would have any impact on performance
+    below-zero-generation-in-existing-chunks: true
+
+# Allowed to customise per world but no perfornace boost
+    growth:
+      cactus-modifier: 100
+      cane-modifier: 100
+      melon-modifier: 100
+      mushroom-modifier: 100
+      pumpkin-modifier: 100
+      sapling-modifier: 100
+      beetroot-modifier: 100
+      carrot-modifier: 100
+      potato-modifier: 100
+      wheat-modifier: 100
+      netherwart-modifier: 100
+      vine-modifier: 100
+      cocoa-modifier: 100
+      bamboo-modifier: 100
+      sweetberry-modifier: 100
+      kelp-modifier: 100
+      twistingvines-modifier: 100
+      weepingvines-modifier: 100
+      cavevines-modifier: 100
+      glowberry-modifier: 100
+    merge-radius:
+      # Different from default - Default: 3.0, the higher value should improve performance
+      #CHANGE Guides are reccommending slightly higher values - originally 4 - don't see any issues getting caused so minor potential improvement with fewer entities
+      exp: 6.0
+      
+       # Different from default - Default: 2.5, the higher value should improve performance
+       #CHANGE Guides are reccommending slightly higher values - originally 3 - don't see any issues getting caused so minor potential improvement with fewer entities
+      item: 4.0
+      
+    # A potential performance saving could come from customising this per world and reducing distances for resource worlds. This does however come with a minor cost in gaming experience from mobs not reacting until closer. A target that cis likley unnoticable for change in resource world is villagers but only a small number of interactions
+    
+    entity-activation-range:
+   
+      # Different from default - Default: 32. lower value should be improving the performance
+      #CHANGED - original 18 optimisation guides recommend 16, should be minor improvement.
+      animals: 16
+
+      monsters: 32
+      raiders: 24
+      misc: 12
+      water: 16
+      villagers: 32
+      flying-monsters: 32
+
+# From paper but can't find full congig info
+      wake-up-inactive:
+        animals-max-per-tick: 4
+        animals-every: 1200
+        animals-for: 100
+        monsters-max-per-tick: 8
+        monsters-every: 400
+        monsters-for: 100
+        villagers-max-per-tick: 4
+        villagers-every: 600
+        villagers-for: 100
+        flying-monsters-max-per-tick: 8
+        flying-monsters-every: 200
+        flying-monsters-for: 100
+      villagers-work-immunity-after: 100
+      villagers-work-immunity-for: 20
+      villagers-active-for-panic: true
+      tick-inactive-villagers: false
+      ignore-spectators: false
+
+    # Slightly different to default in spigot documentation but no real performance impact, mainly effects client side
+    # Optimisation guides have some lower, some higher but all similar, unlikley a worthwhile change
+    entity-tracking-range:
+      players: 64
+      animals: 48
+      monsters: 64
+      misc: 48
+      other: 64
+
+    ticks-per:
+      hopper-transfer: 8
+      hopper-check: 1
+    hopper-amount: 1
+    dragon-death-sound-radius: 12
+    seed-village: <redacted>
+    seed-desert: <redacted>
+    seed-igloo: <redacted>
+    seed-jungle: <redacted>
+    seed-swamp: <redacted>
+    seed-monument: <redacted>
+    seed-shipwreck: <redacted>
+    seed-ocean: <redacted>
+    seed-outpost: <redacted>
+    seed-endcity: <redacted>
+    seed-slime: <redacted>
+    seed-nether: <redacted>
+    seed-mansion: <redacted>
+    seed-fossil: <redacted>
+    seed-portal: <redacted>
+    seed-stronghold: default
+    hunger:
+      jump-walk-exhaustion: 0.05
+      jump-sprint-exhaustion: 0.2
+      combat-exhaustion: 0.1
+      regen-exhaustion: 6.0
+      swim-multiplier: 0.01
+      sprint-multiplier: 0.1
+      other-multiplier: 0.0
+    max-tnt-per-tick: 100
+
+    # These are default values.
+    # These are the times in ms operations can consume to calculate before the server skips on to the next task.
+    # Changing these values can give a performance increase if updates are hitting the 50ms mark regularly.
+    # According to wiki changing entity time should have no affect on gameplay behaviour but entities could appear to lag/stutter if they start passing the value often and getting skipped
+    # Are statistics available for if the server runs close to these limits often?
+    # Potentially chainging entities to slightly lower could help performance when server is struggling
+    # Customising these per world so that entities/tiles in resource world skip sooner than main worlds may be reasonable.
+    # An optimisation guide I am reading suggests placing these to high values to effectivley disable th functionality so not on obvious change, would be useful to know how often this is triggered
+    max-tick-time:
+      tile: 50
+      entity: 50
+    item-despawn-rate: 6000
+    view-distance: default
+
+    # Default appears to be 10 in chunks from the player. 160 blocks in all directions. This may be low hanging fruit to gain perfomance if things became critical but would impact gameplay
+    # Given spawn radius is max 64 blocks and no one should have redstone or other contraptions inside resource worlds reducing this for resource world potentially to 5, 6 or 7 could be a decent saving
+    simulation-distance: default
+    thunder-chance: 100000
+    enable-zombie-pigmen-portal-spawns: true
+    wither-spawn-sound-radius: 0
+
+    #CHANGE - reccomended in guides to half this value as arrows are rarely picked up or are from infinity bows so that number of entities is lower. Original value - 600 - don't see any major downsides given how many arrows are avaialbel on the server
+    arrow-despawn-rate: 300
+
+    trident-despawn-rate: 6000
+
+    # Not stated in documentation what the value of -1 does specifically but assuming disables.
+    hanging-tick-frequency: -1
+    zombie-aggressive-towards-villager: true
+    nerf-spawner-mobs: false
+    mob-spawn-range: 4
+    end-portal-sound-radius: 0
+
+  # A potential reduction in server usage would be to limit the view-distance in the resource worls slightly, currently the global setting is default which is 10. This means from a stationary position a player requires the server to load 314 chunks to view. By reducing this to 8 this changes to 201 or 7 is 153. For resource work halfing the loads for 3 chunks range seems more than acceptable.
+  Resourcenest:
+    #CHANGE added view-distance set to 7
+    view-distance: 7
+    simulation-distance: 2
+    item-despawn-rate: 3000
+    mob-spawn-range: 2
+    ticks-per:
+      hopper-transfer: 80
+      hopper-check: 10
+  
+  #CHANGED
+  # Should have custom setting for resource nether to match resourcenest
+   Resourcenether:
+    #CHANGE added view-distance set to 7
+    view-distance: 7
+    simulation-distance: 2
+    item-despawn-rate: 3000
+    mob-spawn-range: 2
+    ticks-per:
+      hopper-transfer: 80
+      hopper-check: 10
+  Spawn:
+    simulation-distance: 4
+    view-distance: 10
+    hopper-transfer: 50000
+    hopper-check: 50000
+    item-despawn-rate: 3000
+  worldeditregentempworld:
+    verbose: false
+
