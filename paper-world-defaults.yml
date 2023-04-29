@@ -5,26 +5,6 @@ anticheat:
     engine-mode: 1
     hidden-blocks:
     - copper_ore
-    - deepslate_copper_ore
-    - gold_ore
-    - deepslate_gold_ore
-    - iron_ore
-    - deepslate_iron_ore
-    - coal_ore
-    - deepslate_coal_ore
-    - lapis_ore
-    - deepslate_lapis_ore
-    - mossy_cobblestone
-    - obsidian
-    - chest
-    - diamond_ore
-    - deepslate_diamond_ore
-    - redstone_ore
-    - deepslate_redstone_ore
-    - clay
-    - emerald_ore
-    - deepslate_emerald_ore
-    - ender_chest
     lava-obscures: false
     max-block-height: 64
     replacement-blocks:
@@ -132,13 +112,37 @@ entities:
   spawning:
     all-chunks-are-slime-chunks: false
     alt-item-despawn-rate:
-    #FUTURE Update with timings per item type, potential to customise per world depending on drops
-    ##FUTURE Kaya - Removed SPOT items, excited to see your PR.
+    #FUTURE Go thorugh all items - currenlty low hanging fruit
       enabled: true
       items:
         netherrack: 1200
+        rail: 600
+        powered_rail: 600
+        detector_rail: 600
+        activator_rail: 600
+        white_carpet: 1200
+        orange_carpet: 1200
+        magenta_carpet: 1200
+        light_blue_carpet: 1200
+        yellow_carpet: 1200
+        lime_carpet: 1200
+        pink_carpet: 1200
+        gray_carpet: 1200
+        light_gray_carpet: 1200
+        cyan_carpet: 1200
+        purple_carpet: 1200
+        blue_carpet: 1200
+        brown_carpet: 1200
+        green_carpet: 1200
+        red_carpet: 1200
+        black_carpet: 1200
+        dirt: 2400
+        stone: 2400
+        cobblestone: 2400
+        rotten_flesh: 1200
+
     count-all-mobs-for-spawning: false
-    creative-arrow-despawn-rate: default
+    creative-arrow-despawn-rate: 20
     despawn-ranges:
       ambient:
         hard: 64

@@ -4,6 +4,8 @@
 # World: ResourceNest_nether (minecraft:resourcenest_nether)
 
 _version: 30
+chunks:
+  auto-save-interval: 12000
 entities:
   behavior:
     nerf-pigmen-from-nether-portals: false
