@@ -296,7 +296,7 @@ world-settings:
         break-individual-slabs-when-sneaking: false
       spawner:
         deactivate-by-redstone: false
-        fix-mc-238526: false
+        fix-mc-238526: true
       sponge:
         absorption:
           area: 64
