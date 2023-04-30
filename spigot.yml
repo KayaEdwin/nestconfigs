@@ -209,7 +209,7 @@ world-settings:
       villagers-active-for-panic: false
       tick-inactive-villagers: false
       ignore-spectators: false
-   ResourceNest_Nether:
+  ResourceNest_Nether:
     view-distance: 6
     simulation-distance: 2
     item-despawn-rate: 3000
