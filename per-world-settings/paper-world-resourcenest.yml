@@ -18,28 +18,28 @@ entities:
     count-all-mobs-for-spawning: false
     despawn-ranges:
       ambient:
-        hard: 64
+        hard: 48
         soft: 16
       axolotls:
-        hard: 64
+        hard: 48
         soft: 16
       creature:
-        hard: 64
+        hard: 48
         soft: 16
       misc:
-        hard: 64
+        hard: 48
         soft: 16
       monster:
-        hard: 64
+        hard: 48
         soft: 16
       underground_water_creature:
-        hard: 64
+        hard: 48
         soft: 16
       water_ambient:
-        hard: 64
+        hard: 48
         soft: 16
       water_creature:
-        hard: 64
+        hard: 48
         soft: 16
     non-player-arrow-despawn-rate: 20
     per-player-mob-spawns: true
