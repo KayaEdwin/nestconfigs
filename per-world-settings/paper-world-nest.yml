@@ -5,4 +5,10 @@
 
 _version: 30
 
-# Nothing to change, this will be the same as defaults if left blank.
+spawn:
+  # here as a discussion point but given that the mall sits at the center of the map is it
+  # worth keeping at least some of spawn loaded at all time to cover /mall warp to prevent loading/unloaded.
+  # Mall itself is off center so to prevent auto farms we would need to claim area to the south to cover more of
+  # the mall itself
+  keep-spawn-loaded: false
+  keep-spawn-loaded-range: 10

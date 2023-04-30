@@ -10,7 +10,6 @@ entities:
       disable: false
   spawning:
     alt-item-despawn-rate:
-    #FUTURE Update with timings per item type, potential to customise per world depending on drops
       enabled: true
       items:
         netherrack: 1200
