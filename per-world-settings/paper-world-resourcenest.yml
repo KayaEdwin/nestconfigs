@@ -48,11 +48,11 @@ entities:
     spawn-limits:
       ambient: 0
       axolotls: 3
-      creature: 0
+      creature: 3
       monster: 17
       underground_water_creature: 0
-      water_ambient: 11
-      water_creature: 0
+      water_ambient: 2
+      water_creature: 2
     wandering-trader:
       spawn-chance-max: 0
 environment:
