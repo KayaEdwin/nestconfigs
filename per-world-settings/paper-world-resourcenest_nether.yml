@@ -8,11 +8,9 @@ chunks:
   auto-save-interval: 12000
 entities:
   behavior:
-    nerf-pigmen-from-nether-portals: false
-    parrots-are-unaffected-by-player-movement: false
-    pillager-patrols:
-      disable: false
-    zombies-target-turtle-eggs: true
+    nerf-pigmen-from-nether-portals: true
+    parrots-are-unaffected-by-player-movement: true
+    zombies-target-turtle-eggs: false
   entities-target-with-follow-range: false
   markers:
     tick: true
@@ -38,14 +36,12 @@ entities:
     per-player-mob-spawns: true
     spawn-limits:
       ambient: 0
-      axolotls: 3
-      creature: 6
+      axolotls: 0
+      creature: 4
       monster: 17
-      underground_water_creature: 2
-      water_ambient: 11
-      water_creature: 2
-    wandering-trader:
-      spawn-chance-max: 75
+      underground_water_creature: 0
+      water_ambient: 0
+      water_creature: 0
 environment:
   disable-ice-and-snow: false
   disable-thunder: false
@@ -54,9 +50,9 @@ environment:
     enabled: true
   optimize-explosions: true
   treasure-maps:
-    enabled: true
+    enabled: false
 hopper:
-  ignore-occluding-blocks: false
+  ignore-occluding-blocks: true
 maps:
   item-frame-cursor-limit: 128
   item-frame-cursor-update-interval: 10

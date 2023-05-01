@@ -2,40 +2,36 @@ _version: 30
 
 collisions:
   allow-vehicle-collisions: true
-  max-entity-collisions: 8
+  max-entity-collisions: 2
 entities:
   behavior:
     disable-player-crits: false
     pillager-patrols:
       disable: false
   spawning:
-    alt-item-despawn-rate:
-      enabled: true
-      items:
-        netherrack: 1200
     spawn-limits:
       ambient: 0
-      axolotls: 3
-      creature: 6
-      monster: 17
-      underground_water_creature: 2
-      water_ambient: 11
-      water_creature: 2
+      axolotls: 0
+      creature: 0
+      monster: 0
+      underground_water_creature: 0
+      water_ambient: 0
+      water_creature: 0
     wandering-trader:
-      spawn-chance-max: 75
+      spawn-chance-max: 0
 environment:
-  disable-ice-and-snow: false
-  disable-thunder: false
-  fire-tick-delay: 30
+  disable-ice-and-snow: true
+  disable-thunder: true
+  fire-tick-delay: 10000
   frosted-ice:
-    enabled: true
+    enabled: false
   treasure-maps:
-    enabled: true
+    enabled: false
 hopper:
-  ignore-occluding-blocks: false
+  ignore-occluding-blocks: true
 maps:
   item-frame-cursor-update-interval: 10
 tick-rates:
   container-update: 1
-  grass-spread: 4
-  mob-spawner: 1
+  grass-spread: 40
+  mob-spawner: 400000
