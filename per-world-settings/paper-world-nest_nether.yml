@@ -7,15 +7,9 @@ _version: 30
 entities:
   spawning:
     spawn-limits:
-      ambient: 0
-      axolotls: 3
-      creature: 6
+      creature: 3
       monster: 17
-      underground_water_creature: 2
-      water_ambient: 11
-      water_creature: 2
 environment:
-  disable-explosion-knockback: false
   fire-tick-delay: 30
 lootables:
   auto-replenish: false
