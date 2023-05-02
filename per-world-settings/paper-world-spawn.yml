@@ -5,6 +5,10 @@
 
 _version: 30
 
+spawn:
+  keep-spawn-loaded: true
+  keep-spawn-loaded-range: 15
+
 collisions:
   allow-vehicle-collisions: false
   max-entity-collisions: 2
