@@ -7,4 +7,4 @@ _version: 30
 
 spawn:
   keep-spawn-loaded: true
-  keep-spawn-loaded-range: 10
+  keep-spawn-loaded-range: 13
