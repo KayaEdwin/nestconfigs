@@ -270,8 +270,7 @@ misc:
   disable-sprint-interruption-on-attack: false
   light-queue-size: 20
   max-leash-distance: 10.0
-  redstone-implementation: VANILLA
-  #FUTURE - might change this, I've not had issues with Eigencraft. Link: https://docs.papermc.io/paper/reference/world-configuration#redstone-implementation
+  redstone-implementation: EIGENCRAFT
   shield-blocking-delay: 5
   show-sign-click-command-failure-msgs-to-player: false
   update-pathfinding-on-block-update: false
