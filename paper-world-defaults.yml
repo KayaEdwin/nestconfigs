@@ -1,3 +1,17 @@
+# This is the world defaults configuration file for Paper.
+# As you can see, there's a lot to configure. Some options may impact gameplay, so use
+# with caution, and make sure you know what each option does before configuring.
+# 
+# If you need help with the configuration or have any questions related to Paper,
+# join us in our Discord or check the docs page.
+# 
+# Configuration options here apply to all worlds, unless you specify overrides inside
+# the world-specific config file inside each world folder.
+# 
+# Docs: https://docs.papermc.io/
+# Discord: https://discord.gg/papermc
+# Website: https://papermc.io/
+
 _version: 30
 anticheat:
   anti-xray:
@@ -13,13 +27,11 @@ anticheat:
     - deepslate
     update-radius: 2
     use-permission: false
-
   obfuscation:
     items:
       hide-durability: false
       hide-itemmeta: false
       hide-itemmeta-with-visual-effects: false
-
 chunks:
   auto-save-interval: default
   delay-chunk-unloads-by: 10s
@@ -42,7 +54,6 @@ chunks:
     spectral_arrow: 16
     trident: 16
     wither_skull: 4
-    
   fixed-chunk-inhabited-time: -1
   max-auto-save-chunks-per-tick: 16
   prevent-moving-into-unloaded-chunks: true
@@ -115,34 +126,33 @@ entities:
     #FUTURE Go thorugh all items - currenlty low hanging fruit
       enabled: true
       items:
-        netherrack: 1200
-        rail: 600
-        powered_rail: 600
-        detector_rail: 600
         activator_rail: 600
-        white_carpet: 1200
-        orange_carpet: 1200
-        magenta_carpet: 1200
-        light_blue_carpet: 1200
-        yellow_carpet: 1200
-        lime_carpet: 1200
-        pink_carpet: 1200
-        gray_carpet: 1200
-        light_gray_carpet: 1200
-        cyan_carpet: 1200
-        purple_carpet: 1200
+        black_carpet: 1200
         blue_carpet: 1200
         brown_carpet: 1200
-        green_carpet: 1200
-        red_carpet: 1200
-        black_carpet: 1200
-        dirt: 2400
-        stone: 2400
         cobblestone: 2400
+        cyan_carpet: 1200
+        detector_rail: 600
+        dirt: 2400
+        gray_carpet: 1200
+        green_carpet: 1200
+        light_blue_carpet: 1200
+        light_gray_carpet: 1200
+        lime_carpet: 1200
+        magenta_carpet: 1200
+        netherrack: 1200
+        orange_carpet: 1200
+        pink_carpet: 1200
+        powered_rail: 600
+        purple_carpet: 1200
+        rail: 600
+        red_carpet: 1200
         rotten_flesh: 1200
-
+        stone: 2400
+        white_carpet: 1200
+        yellow_carpet: 1200
     count-all-mobs-for-spawning: false
-    creative-arrow-despawn-rate: 20
+    creative-arrow-despawn-rate: '20'
     despawn-ranges:
       ambient:
         hard: 64
@@ -181,7 +191,7 @@ entities:
     - SleepingZ
     iron-golems-can-spawn-in-air: false
     monster-spawn-max-light-level: -1
-    non-player-arrow-despawn-rate: 20
+    non-player-arrow-despawn-rate: '20'
     per-player-mob-spawns: true
     scan-for-legacy-ender-dragon: true
     skeleton-horse-thunder-spawn-chance: default
@@ -281,7 +291,6 @@ spawn:
   allow-using-signs-inside-spawn-protection: false
   keep-spawn-loaded: false
   keep-spawn-loaded-range: 10
-
 #FUTURE: Review usuage via spark and tune rates as appropriate
 tick-rates:
   behavior:

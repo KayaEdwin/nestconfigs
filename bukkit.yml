@@ -11,7 +11,7 @@ settings:
   shutdown-message: The Nest is restarting, check back in 1 minute!
   minimum-api: none
 
-#FUTURE - review an increase after farmlimiter plugin
+# FUTURE - review an increase after farmlimiter plugin
 spawn-limits:
   axolotls: 2
   water-underground-creature: 1

@@ -4,11 +4,6 @@
 # World: Spawn (minecraft:spawn)
 
 _version: 30
-
-spawn:
-  keep-spawn-loaded: true
-  keep-spawn-loaded-range: 15
-
 collisions:
   allow-vehicle-collisions: false
   max-entity-collisions: 2
@@ -40,6 +35,9 @@ hopper:
   ignore-occluding-blocks: true
 maps:
   item-frame-cursor-update-interval: 10
+spawn:
+  keep-spawn-loaded: true
+  keep-spawn-loaded-range: 15
 tick-rates:
   container-update: 1
   grass-spread: 40000

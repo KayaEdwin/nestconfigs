@@ -1,3 +1,15 @@
+# This is the main configuration file for Spigot.
+# As you can see, there's tons to configure. Some options may impact gameplay, so use
+# with caution, and make sure you know what each option does before configuring.
+# For a reference for any variable inside this file, check out the Spigot wiki at
+# http://www.spigotmc.org/wiki/spigot-configuration/
+#
+# If you need help with the configuration or have any questions related to Spigot,
+# join us at the Discord or drop by our forums and leave a post.
+#
+# Discord: https://www.spigotmc.org/go/discord
+# Forums: http://www.spigotmc.org/
+
 settings:
   debug: false
   sample-count: 12
@@ -113,7 +125,7 @@ world-settings:
       monsters: 64
       misc: 48
       other: 64
-
+    
     ticks-per:
       hopper-transfer: 8
       hopper-check: 1
@@ -144,24 +156,24 @@ world-settings:
       sprint-multiplier: 0.1
       other-multiplier: 0.0
     max-tnt-per-tick: 100
-
+    
     # These are default values.
     # These are the times in ms operations can consume to calculate before the server skips on to the next task.
     # Changing these values can give a performance increase if updates are hitting the 50ms mark regularly.
     # According to wiki changing entity time should have no affect on gameplay behaviour but entities could appear to lag/stutter if they start passing the value often and getting skipped
     # Are statistics available for if the server runs close to these limits often?
-    ## These statistics are available. I've sent them to you.
+    # # These statistics are available. I've sent them to you.
     # Potentially chainging entities to slightly lower could help performance when server is struggling
     # Customising these per world so that entities/tiles in resource world skip sooner than main worlds may be reasonable.
     # An optimisation guide I am reading suggests placing these to high values to effectivley disable th functionality so not on obvious change, would be useful to know how often this is triggered
-    ## Leaving you to take a look at this with the provided data.
-    #DAVE: Will review and see if anything that easy an easy improvement
+    # # Leaving you to take a look at this with the provided data.
+    # DAVE: Will review and see if anything that easy an easy improvement
     max-tick-time:
       tile: 50
       entity: 50
     item-despawn-rate: 6000
     view-distance: default
-
+    
     # Default appears to be 10 in chunks from the player. 160 blocks in all directions. This may be low hanging fruit to gain perfomance if things became critical but would impact gameplay
     # Given spawn radius is max 64 blocks and no one should have redstone or other contraptions inside resource worlds reducing this for resource world potentially to 5, 6 or 7 could be a decent saving
     simulation-distance: default
