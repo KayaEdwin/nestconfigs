@@ -21,28 +21,7 @@ chunk-loading:
   global-max-concurrent-loads: 500.0
   max-concurrent-sends: 2
   min-load-radius: 2
-  player-max-chunk-load-rate: 100.0
-
-  # Max concurrent rate per player limits the
-  # concurrent on the server but not the total rate at which a player is
-  # loading chunks up to the point where the server is max CPU/IO if a
-  # player is travelling fast enough. Players with elytra will be
-  # travelling roughly 2 chunks per second, ice roads are faster still.
-  # This means each player can load upto 40 chunks per second while flying
-  # and can load up 314 after rtp at whatever the max rate the server can
-  # handle 20 at a time.
-
-  # Suggest implementing a max load rate for players, this will likely reduce issues
-  # with rtp causing huge load spikes and when flying(chunks should be loaded
-  # in a sane order closest first but not finding documentation) Added a
-  # rate per player of 100 above, this means after an rtp whole 314 area
-  # is loaded in ~3 seconds, this lines up with the send rate of 100 below
-  # so player can't load more chunks in a second than can be sent to them
-  # and is far faster than a flying player can travel under normal
-  # circumstance. Performance and effect on server will have to be
-  # judged with such a change but seems like it might help especially
-  # when under load, actual effect most of the time will likely be 0
-  # on server and a minor delay on rtp for all chunks in the distance
+  player-max-chunk-load-rate: -1.0
   player-max-concurrent-loads: 20.0
   target-player-chunk-send-rate: 100.0
 chunk-system:

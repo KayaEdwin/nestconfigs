@@ -91,10 +91,10 @@ world-settings:
       cavevines-modifier: 100
       glowberry-modifier: 100
     merge-radius:
-      exp: 6.0
-      item: 4.0
+      exp: 4.0
+      item: 3.0
     entity-activation-range:
-      animals: 16
+      animals: 18
       monsters: 32
       raiders: 24
       misc: 12
@@ -125,7 +125,6 @@ world-settings:
       monsters: 64
       misc: 48
       other: 64
-    
     ticks-per:
       hopper-transfer: 8
       hopper-check: 1
@@ -156,31 +155,16 @@ world-settings:
       sprint-multiplier: 0.1
       other-multiplier: 0.0
     max-tnt-per-tick: 100
-    
-    # These are default values.
-    # These are the times in ms operations can consume to calculate before the server skips on to the next task.
-    # Changing these values can give a performance increase if updates are hitting the 50ms mark regularly.
-    # According to wiki changing entity time should have no affect on gameplay behaviour but entities could appear to lag/stutter if they start passing the value often and getting skipped
-    # Are statistics available for if the server runs close to these limits often?
-    # # These statistics are available. I've sent them to you.
-    # Potentially chainging entities to slightly lower could help performance when server is struggling
-    # Customising these per world so that entities/tiles in resource world skip sooner than main worlds may be reasonable.
-    # An optimisation guide I am reading suggests placing these to high values to effectivley disable th functionality so not on obvious change, would be useful to know how often this is triggered
-    # # Leaving you to take a look at this with the provided data.
-    # DAVE: Will review and see if anything that easy an easy improvement
     max-tick-time:
       tile: 50
       entity: 50
     item-despawn-rate: 6000
     view-distance: default
-    
-    # Default appears to be 10 in chunks from the player. 160 blocks in all directions. This may be low hanging fruit to gain perfomance if things became critical but would impact gameplay
-    # Given spawn radius is max 64 blocks and no one should have redstone or other contraptions inside resource worlds reducing this for resource world potentially to 5, 6 or 7 could be a decent saving
     simulation-distance: default
     thunder-chance: 100000
     enable-zombie-pigmen-portal-spawns: true
     wither-spawn-sound-radius: 0
-    arrow-despawn-rate: 300
+    arrow-despawn-rate: 600
     trident-despawn-rate: 6000
     hanging-tick-frequency: -1
     zombie-aggressive-towards-villager: true
@@ -188,75 +172,14 @@ world-settings:
     mob-spawn-range: 4
     end-portal-sound-radius: 0
   Resourcenest:
-    view-distance: 6
     simulation-distance: 2
     item-despawn-rate: 3000
     mob-spawn-range: 2
     ticks-per:
       hopper-transfer: 80
       hopper-check: 10
-    entity-activation-range:
-      animals: 16
-      monsters: 24
-      raiders: 16
-      misc: 12
-      water: 16
-      villagers: 16
-      flying-monsters: 24
-      wake-up-inactive:
-        animals-max-per-tick: 4
-        animals-every: 1200
-        animals-for: 100
-        monsters-max-per-tick: 8
-        monsters-every: 400
-        monsters-for: 100
-        villagers-max-per-tick: 4
-        villagers-every: 600
-        villagers-for: 100
-        flying-monsters-max-per-tick: 8
-        flying-monsters-every: 200
-        flying-monsters-for: 100
-      villagers-work-immunity-after: 100
-      villagers-work-immunity-for: 20
-      villagers-active-for-panic: false
-      tick-inactive-villagers: false
-      ignore-spectators: false
-  ResourceNest_Nether:
-    view-distance: 6
-    simulation-distance: 2
-    item-despawn-rate: 3000
-    mob-spawn-range: 2
-    ticks-per:
-      hopper-transfer: 80
-      hopper-check: 10
-    entity-activation-range:
-      animals: 16
-      monsters: 24
-      raiders: 16
-      misc: 12
-      water: 16
-      villagers: 16
-      flying-monsters: 24
-      wake-up-inactive:
-        animals-max-per-tick: 4
-        animals-every: 1200
-        animals-for: 100
-        monsters-max-per-tick: 8
-        monsters-every: 400
-        monsters-for: 100
-        villagers-max-per-tick: 4
-        villagers-every: 600
-        villagers-for: 100
-        flying-monsters-max-per-tick: 8
-        flying-monsters-every: 200
-        flying-monsters-for: 100
-      villagers-work-immunity-after: 100
-      villagers-work-immunity-for: 20
-      villagers-active-for-panic: false
-      tick-inactive-villagers: false
-      ignore-spectators: false
   Spawn:
-    simulation-distance: 3
+    simulation-distance: 4
     view-distance: 10
     hopper-transfer: 50000
     hopper-check: 50000

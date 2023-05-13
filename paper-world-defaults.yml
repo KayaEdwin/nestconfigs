@@ -19,6 +19,26 @@ anticheat:
     engine-mode: 1
     hidden-blocks:
     - copper_ore
+    - deepslate_copper_ore
+    - gold_ore
+    - deepslate_gold_ore
+    - iron_ore
+    - deepslate_iron_ore
+    - coal_ore
+    - deepslate_coal_ore
+    - lapis_ore
+    - deepslate_lapis_ore
+    - mossy_cobblestone
+    - obsidian
+    - chest
+    - diamond_ore
+    - deepslate_diamond_ore
+    - redstone_ore
+    - deepslate_redstone_ore
+    - clay
+    - emerald_ore
+    - deepslate_emerald_ore
+    - ender_chest
     lava-obscures: false
     max-block-height: 64
     replacement-blocks:
@@ -36,26 +56,14 @@ chunks:
   auto-save-interval: default
   delay-chunk-unloads-by: 10s
   entity-per-chunk-save-limit:
-    area_effect_cloud: 8
-    arrow: 16
-    dragon_fireball: 3
-    egg: 8
-    ender_pearl: 8
-    experience_bottle: 3
-    experience_orb: 16
-    eye_of_ender: 8
-    fireball: 8
-    firework_rocket: 8
-    llama_spit: 3
-    potion: 8
-    shulker_bullet: 8
-    small_fireball: 8
-    snowball: 8
-    spectral_arrow: 16
-    trident: 16
-    wither_skull: 4
+    arrow: -1
+    ender_pearl: -1
+    experience_orb: -1
+    fireball: -1
+    small_fireball: -1
+    snowball: -1
   fixed-chunk-inhabited-time: -1
-  max-auto-save-chunks-per-tick: 16
+  max-auto-save-chunks-per-tick: 24
   prevent-moving-into-unloaded-chunks: true
 collisions:
   allow-player-cramming-damage: false
@@ -105,7 +113,7 @@ entities:
         ticks: 12000
       start:
         day: 5
-        per-player: true
+        per-player: false
     player-insomnia-start-ticks: 144000
     should-remove-dragon: false
     spawner-nerfed-mobs-should-jump: false
@@ -123,36 +131,11 @@ entities:
   spawning:
     all-chunks-are-slime-chunks: false
     alt-item-despawn-rate:
-    #FUTURE Go thorugh all items - currenlty low hanging fruit
       enabled: true
       items:
-        activator_rail: 600
-        black_carpet: 1200
-        blue_carpet: 1200
-        brown_carpet: 1200
-        cobblestone: 2400
-        cyan_carpet: 1200
-        detector_rail: 600
-        dirt: 2400
-        gray_carpet: 1200
-        green_carpet: 1200
-        light_blue_carpet: 1200
-        light_gray_carpet: 1200
-        lime_carpet: 1200
-        magenta_carpet: 1200
         netherrack: 1200
-        orange_carpet: 1200
-        pink_carpet: 1200
-        powered_rail: 600
-        purple_carpet: 1200
-        rail: 600
-        red_carpet: 1200
-        rotten_flesh: 1200
-        stone: 2400
-        white_carpet: 1200
-        yellow_carpet: 1200
     count-all-mobs-for-spawning: false
-    creative-arrow-despawn-rate: '20'
+    creative-arrow-despawn-rate: default
     despawn-ranges:
       ambient:
         hard: 64
@@ -191,7 +174,7 @@ entities:
     - SleepingZ
     iron-golems-can-spawn-in-air: false
     monster-spawn-max-light-level: -1
-    non-player-arrow-despawn-rate: '20'
+    non-player-arrow-despawn-rate: default
     per-player-mob-spawns: true
     scan-for-legacy-ender-dragon: true
     skeleton-horse-thunder-spawn-chance: default
@@ -256,7 +239,11 @@ fixes:
   tnt-entity-height-nerf: disabled
 hopper:
   cooldown-when-full: true
-  disable-move-event: true
+  disable-move-event: false
+  disable-move-event-quickshop-tips: QuickShop automatic disabled this due it will
+    allow other players steal items from shop. This notice only shown when have shops
+    in current world and hopper protection is on and also disable-move-event turned
+    on.
   ignore-occluding-blocks: false
 lootables:
   auto-replenish: false
@@ -276,14 +263,14 @@ max-growth-height:
   reeds: 3
 misc:
   disable-end-credits: false
-  disable-relative-projectile-velocity: true
+  disable-relative-projectile-velocity: false
   disable-sprint-interruption-on-attack: false
   light-queue-size: 20
   max-leash-distance: 10.0
   redstone-implementation: EIGENCRAFT
   shield-blocking-delay: 5
   show-sign-click-command-failure-msgs-to-player: false
-  update-pathfinding-on-block-update: false
+  update-pathfinding-on-block-update: true
 scoreboards:
   allow-non-player-entities-on-scoreboards: false
   use-vanilla-world-scoreboard-name-coloring: false
@@ -291,13 +278,12 @@ spawn:
   allow-using-signs-inside-spawn-protection: false
   keep-spawn-loaded: false
   keep-spawn-loaded-range: 10
-#FUTURE: Review usuage via spark and tune rates as appropriate
 tick-rates:
   behavior:
     villager:
       validatenearbypoi: -1
   container-update: 1
-  grass-spread: 4
+  grass-spread: 1
   mob-spawner: 1
   sensor:
     villager:

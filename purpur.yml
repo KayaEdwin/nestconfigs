@@ -126,7 +126,7 @@ settings:
   enchantment:
     allow-infinity-and-mending-together: true
     allow-infinity-on-crossbow: false
-    allow-looting-on-shears: false
+    allow-looting-on-shears: true
     allow-transparent-blocks-in-enchantment-box: false
     anvil:
       allow-unsafe-enchants: false
@@ -187,7 +187,7 @@ settings:
       distance: 0.5
     minecraft:orange_bed:
       distance: 0.5
-config-version: 31
+config-version: 32
 world-settings:
   default:
     blocks:
@@ -306,7 +306,7 @@ world-settings:
         break-individual-slabs-when-sneaking: false
       spawner:
         deactivate-by-redstone: false
-        fix-mc-238526: true
+        fix-mc-238526: false
       sponge:
         absorption:
           area: 64
@@ -399,6 +399,15 @@ world-settings:
           minecraft:dark_oak_log:
             into: minecraft:stripped_dark_oak_log
             drops: {}
+          minecraft:cherry_log:
+            drops: {}
+            into: minecraft:stripped_cherry_log
+          minecraft:cherry_wood:
+            drops: {}
+            into: minecraft:stripped_cherry_wood
+          minecraft:bamboo_block:
+            drops: {}
+            into: minecraft:stripped_bamboo_block
         waxables:
           minecraft:waxed_exposed_cut_copper:
             into: minecraft:exposed_cut_copper
@@ -1346,7 +1355,7 @@ world-settings:
           only-babies: true
           chance: 0.05
           try-existing-chickens: true
-        aggressive-towards-villager-when-lagging: false
+        aggressive-towards-villager-when-lagging: true
         bypass-mob-griefing: false
         takes-damage-from-water: false
         always-drop-exp: false

@@ -10,28 +10,23 @@ settings:
   deprecated-verbose: default
   shutdown-message: The Nest is restarting, check back in 1 minute!
   minimum-api: none
-
-# FUTURE - review an increase after farmlimiter plugin
 spawn-limits:
   axolotls: 2
   water-underground-creature: 1
   monsters: 17
-  animals: 4
+  animals: 3
   water-animals: 3
   water-ambient: 9
   ambient: 0
-
 chunk-gc:
-  period-in-ticks: 400
-
+  period-in-ticks: 600
 ticks-per:
   animal-spawns: 400
-  monster-spawns: 10
+  monster-spawns: 4
   water-spawns: 100
   water-ambient-spawns: 20
   water-underground-creature-spawns: 400
   axolotl-spawns: 400
   ambient-spawns: 400
   autosave: 6000
-
 aliases: now-in-commands.yml
