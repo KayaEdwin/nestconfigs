@@ -56,3 +56,35 @@ hopper:
 maps:
   item-frame-cursor-limit: 128
   item-frame-cursor-update-interval: 10
+tick-rates:
+  behavior:
+     villager:
+       validatenearbypoi: 100
+       acquirepoi: 200
+  sensor:
+    allay:
+      nearestitemsensor: 40
+      nearestlivingentitysensor: 40
+      playersensor: 40
+    frog:
+      frogattackablessensor: 40
+      temptingsensor: 40
+    hoglin:
+      nearestlivingentitysensor: 40
+      playersensor: 40
+    piglin:
+      hurtbysensor: 40
+      nearestitemsensor: 40
+      nearestlivingentitysensor: 40
+      piglinspecificsensor: 40
+      playersensor: 40
+    villager:
+      golemsensor: 300
+      hurtbysensor: 40
+      nearestbedsensor: 120
+      nearestitemsensor: 60
+      nearestlivingentitysensor: 60
+      playersensor: 60
+      secondarypoisensor: 120
+      villagerbabiessensor: 60
+      villagerhostilessensor: 60  

@@ -295,23 +295,24 @@ spawn:
 tick-rates:
   behavior:
     villager:
-      validatenearbypoi: -1
+          validatenearbypoi: 60
+          acquirepoi: 120
   container-update: 1
   grass-spread: 4
   mob-spawner: 1
   sensor:
     allay:
-      hurtbysensor: 20
+      hurtbysensor: 40
       nearestitemsensor: 20
       nearestlivingentitysensor: 20
       playersensor: 20
     armor_stand:
     axolotl:
-      adultsensor: 20
-      axolotlattackablessensor: 20
-      hurtbysensor: 20
-      nearestlivingentitysensor: 20
-      temptingsensor: 20
+      adultsensor: 40
+      axolotlattackablessensor: 40
+      hurtbysensor: 40
+      nearestlivingentitysensor: 40
+      temptingsensor: 40
     bat:
     bee:
     blaze:
@@ -332,26 +333,26 @@ tick-rates:
     fox:
     frog:
       frogattackablessensor: 20
-      hurtbysensor: 20
-      isinwatersensor: 20
-      nearestlivingentitysensor: 20
+      hurtbysensor: 40
+      isinwatersensor: 40
+      nearestlivingentitysensor: 40
       temptingsensor: 20
     ghast:
     giant:
     glow_squid:
     goat:
-      adultsensor: 20
-      hurtbysensor: 20
+      adultsensor: 40
+      hurtbysensor: 40
       nearestitemsensor: 20
       nearestlivingentitysensor: 20
       playersensor: 20
-      temptingsensor: 20
+      temptingsensor: 40
     guardian:
     hoglin:
-      adultsensor: 20
-      hoglinspecificsensor: 20
-      nearestlivingentitysensor: 20
-      playersensor: 20
+      adultsensor: 40
+      hoglinspecificsensor: 30
+      nearestlivingentitysensor: 30
+      playersensor: 30
     horse:
     husk:
     illusioner:
@@ -366,15 +367,15 @@ tick-rates:
     phantom:
     pig:
     piglin:
-      hurtbysensor: 20
+      hurtbysensor: 40
       nearestitemsensor: 20
-      nearestlivingentitysensor: 20
+      nearestlivingentitysensor: 30
       piglinspecificsensor: 20
-      playersensor: 20
+      playersensor: 30
     piglin_brute:
-      hurtbysensor: 20
-      nearestitemsensor: 20
-      nearestlivingentitysensor: 20
+      hurtbysensor: 40
+      nearestitemsensor: 40
+      nearestlivingentitysensor: 40
       piglinbrutespecificsensor: 20
       playersensor: 20
     pillager:
@@ -395,24 +396,24 @@ tick-rates:
     stray:
     strider:
     tadpole:
-      hurtbysensor: 20
-      nearestlivingentitysensor: 20
-      playersensor: 20
-      temptingsensor: 20
+      hurtbysensor: 40
+      nearestlivingentitysensor: 40
+      playersensor: 40
+      temptingsensor: 40
     trader_llama:
     tropical_fish:
     turtle:
     vex:
     villager:
       golemsensor: 200
-      hurtbysensor: 20
-      nearestbedsensor: 20
-      nearestitemsensor: 20
-      nearestlivingentitysensor: 20
-      playersensor: 20
-      secondarypoisensor: 40
-      villagerbabiessensor: 20
-      villagerhostilessensor: 20
+      hurtbysensor: 40
+      nearestbedsensor: 80
+      nearestitemsensor: 40
+      nearestlivingentitysensor: 40
+      playersensor: 40
+      secondarypoisensor: 80
+      villagerbabiessensor: 40
+      villagerhostilessensor: 40  
     vindicator:
     wandering_trader:
     warden:
@@ -423,8 +424,8 @@ tick-rates:
     wither_skeleton:
     wolf:
     zoglin:
-      nearestlivingentitysensor: 20
-      playersensor: 20
+      nearestlivingentitysensor: 40
+      playersensor: 40
     zombie:
     zombie_horse:
     zombie_villager:
