@@ -300,7 +300,134 @@ tick-rates:
   grass-spread: 4
   mob-spawner: 1
   sensor:
+    allay:
+      hurtbysensor: 20
+      nearestitemsensor: 20
+      nearestlivingentitysensor: 20
+      playersensor: 20
+    armor_stand:
+    axolotl:
+      adultsensor: 20
+      axolotlattackablessensor: 20
+      hurtbysensor: 20
+      nearestlivingentitysensor: 20
+      temptingsensor: 20
+    bat:
+    bee:
+    blaze:
+    cat:
+    cave_spider:
+    chicken:
+    cod:
+    cow:
+    creeper:
+    dolphin:
+    donkey:
+    drowned:
+    elder_guardian:
+    ender_dragon:
+    enderman:
+    endermite:
+    evoker:
+    fox:
+    frog:
+      frogattackablessensor: 20
+      hurtbysensor: 20
+      isinwatersensor: 20
+      nearestlivingentitysensor: 20
+      temptingsensor: 20
+    ghast:
+    giant:
+    glow_squid:
+    goat:
+      adultsensor: 20
+      hurtbysensor: 20
+      nearestitemsensor: 20
+      nearestlivingentitysensor: 20
+      playersensor: 20
+      temptingsensor: 20
+    guardian:
+    hoglin:
+      adultsensor: 20
+      hoglinspecificsensor: 20
+      nearestlivingentitysensor: 20
+      playersensor: 20
+    horse:
+    husk:
+    illusioner:
+    iron_golem:
+    llama:
+    magma_cube:
+    mule:
+    mushroom_cow:
+    ocelot:
+    panda:
+    parrot:
+    phantom:
+    pig:
+    piglin:
+      hurtbysensor: 20
+      nearestitemsensor: 20
+      nearestlivingentitysensor: 20
+      piglinspecificsensor: 20
+      playersensor: 20
+    piglin_brute:
+      hurtbysensor: 20
+      nearestitemsensor: 20
+      nearestlivingentitysensor: 20
+      piglinbrutespecificsensor: 20
+      playersensor: 20
+    pillager:
+    polar_bear:
+    pufferfish:
+    rabbit:
+    ravager:
+    salmon:
+    sheep:
+    shulker:
+    silverfish:
+    skeleton:
+    skeleton_horse:
+    slime:
+    snowman:
+    spider:
+    squid:
+    stray:
+    strider:
+    tadpole:
+      hurtbysensor: 20
+      nearestlivingentitysensor: 20
+      playersensor: 20
+      temptingsensor: 20
+    trader_llama:
+    tropical_fish:
+    turtle:
+    vex:
     villager:
+      golemsensor: 200
+      hurtbysensor: 20
+      nearestbedsensor: 20
+      nearestitemsensor: 20
+      nearestlivingentitysensor: 20
+      playersensor: 20
       secondarypoisensor: 40
+      villagerbabiessensor: 20
+      villagerhostilessensor: 20
+    vindicator:
+    wandering_trader:
+    warden:
+      playersensor: 20
+      wardenentitysensor: 20
+    witch:
+    wither:
+    wither_skeleton:
+    wolf:
+    zoglin:
+      nearestlivingentitysensor: 20
+      playersensor: 20
+    zombie:
+    zombie_horse:
+    zombie_villager:
+    zombified_piglin:
 unsupported-settings:
   fix-invulnerable-end-crystal-exploit: true
