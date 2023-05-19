@@ -295,8 +295,8 @@ spawn:
 tick-rates:
   behavior:
     villager:
-          validatenearbypoi: 60
-          acquirepoi: 120
+      acquirepoi: 120
+      validatenearbypoi: 60
   container-update: 1
   grass-spread: 4
   mob-spawner: 1
@@ -306,40 +306,18 @@ tick-rates:
       nearestitemsensor: 20
       nearestlivingentitysensor: 20
       playersensor: 20
-    armor_stand:
     axolotl:
       adultsensor: 40
       axolotlattackablessensor: 40
       hurtbysensor: 40
       nearestlivingentitysensor: 40
       temptingsensor: 40
-    bat:
-    bee:
-    blaze:
-    cat:
-    cave_spider:
-    chicken:
-    cod:
-    cow:
-    creeper:
-    dolphin:
-    donkey:
-    drowned:
-    elder_guardian:
-    ender_dragon:
-    enderman:
-    endermite:
-    evoker:
-    fox:
     frog:
       frogattackablessensor: 20
       hurtbysensor: 40
       isinwatersensor: 40
       nearestlivingentitysensor: 40
       temptingsensor: 20
-    ghast:
-    giant:
-    glow_squid:
     goat:
       adultsensor: 40
       hurtbysensor: 40
@@ -347,25 +325,11 @@ tick-rates:
       nearestlivingentitysensor: 20
       playersensor: 20
       temptingsensor: 40
-    guardian:
     hoglin:
       adultsensor: 40
       hoglinspecificsensor: 30
       nearestlivingentitysensor: 30
       playersensor: 30
-    horse:
-    husk:
-    illusioner:
-    iron_golem:
-    llama:
-    magma_cube:
-    mule:
-    mushroom_cow:
-    ocelot:
-    panda:
-    parrot:
-    phantom:
-    pig:
     piglin:
       hurtbysensor: 40
       nearestitemsensor: 20
@@ -378,32 +342,11 @@ tick-rates:
       nearestlivingentitysensor: 40
       piglinbrutespecificsensor: 20
       playersensor: 20
-    pillager:
-    polar_bear:
-    pufferfish:
-    rabbit:
-    ravager:
-    salmon:
-    sheep:
-    shulker:
-    silverfish:
-    skeleton:
-    skeleton_horse:
-    slime:
-    snowman:
-    spider:
-    squid:
-    stray:
-    strider:
     tadpole:
       hurtbysensor: 40
       nearestlivingentitysensor: 40
       playersensor: 40
       temptingsensor: 40
-    trader_llama:
-    tropical_fish:
-    turtle:
-    vex:
     villager:
       golemsensor: 200
       hurtbysensor: 40
@@ -413,22 +356,12 @@ tick-rates:
       playersensor: 40
       secondarypoisensor: 80
       villagerbabiessensor: 40
-      villagerhostilessensor: 40  
-    vindicator:
-    wandering_trader:
+      villagerhostilessensor: 40
     warden:
       playersensor: 20
       wardenentitysensor: 20
-    witch:
-    wither:
-    wither_skeleton:
-    wolf:
     zoglin:
       nearestlivingentitysensor: 40
       playersensor: 40
-    zombie:
-    zombie_horse:
-    zombie_villager:
-    zombified_piglin:
 unsupported-settings:
   fix-invulnerable-end-crystal-exploit: true
