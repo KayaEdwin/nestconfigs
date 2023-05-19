@@ -295,12 +295,73 @@ spawn:
 tick-rates:
   behavior:
     villager:
-      validatenearbypoi: -1
+      acquirepoi: 120
+      validatenearbypoi: 60
   container-update: 1
   grass-spread: 4
   mob-spawner: 1
   sensor:
+    allay:
+      hurtbysensor: 40
+      nearestitemsensor: 20
+      nearestlivingentitysensor: 20
+      playersensor: 20
+    axolotl:
+      adultsensor: 40
+      axolotlattackablessensor: 40
+      hurtbysensor: 40
+      nearestlivingentitysensor: 40
+      temptingsensor: 40
+    frog:
+      frogattackablessensor: 20
+      hurtbysensor: 40
+      isinwatersensor: 40
+      nearestlivingentitysensor: 40
+      temptingsensor: 20
+    goat:
+      adultsensor: 40
+      hurtbysensor: 40
+      nearestitemsensor: 20
+      nearestlivingentitysensor: 20
+      playersensor: 20
+      temptingsensor: 40
+    hoglin:
+      adultsensor: 40
+      hoglinspecificsensor: 30
+      nearestlivingentitysensor: 30
+      playersensor: 30
+    piglin:
+      hurtbysensor: 40
+      nearestitemsensor: 20
+      nearestlivingentitysensor: 30
+      piglinspecificsensor: 20
+      playersensor: 30
+    piglin_brute:
+      hurtbysensor: 40
+      nearestitemsensor: 40
+      nearestlivingentitysensor: 40
+      piglinbrutespecificsensor: 20
+      playersensor: 20
+    tadpole:
+      hurtbysensor: 40
+      nearestlivingentitysensor: 40
+      playersensor: 40
+      temptingsensor: 40
     villager:
-      secondarypoisensor: 40
+      golemsensor: 200
+      hurtbysensor: 40
+      nearestbedsensor: 80
+      nearestitemsensor: 40
+      nearestlivingentitysensor: 40
+      playersensor: 40
+      secondarypoisensor: 80
+      villagerbabiessensor: 40
+      villagerhostilessensor: 40
+    warden:
+      playersensor: 20
+      wardenentitysensor: 20
+    zoglin:
+      nearestlivingentitysensor: 40
+      playersensor: 40
 unsupported-settings:
   fix-invulnerable-end-crystal-exploit: true
