@@ -26,7 +26,7 @@ settings:
     dont-run-with-scissors: <red><italic>Don't run with scissors!
     uptime-command-output: <green>Server uptime is <uptime>
     unverified-username: default
-    sleep-skipping-night: default
+    sleep-skipping-night: <green>
     sleeping-players-percent: default
     death-message:
       run-with-scissors: <player> slipped and fell on their shears
