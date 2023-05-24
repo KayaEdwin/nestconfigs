@@ -27,7 +27,7 @@ settings:
     uptime-command-output: <green>Server uptime is <uptime>
     unverified-username: default
     sleep-skipping-night: <green>
-    sleeping-players-percent: default
+    sleeping-players-percent: <green>
     death-message:
       run-with-scissors: <player> slipped and fell on their shears
       stonecutter: <player> has sawed themself in half
