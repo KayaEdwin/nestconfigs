@@ -126,7 +126,7 @@ settings:
   enchantment:
     allow-infinity-and-mending-together: true
     allow-infinity-on-crossbow: false
-    allow-looting-on-shears: false
+    allow-looting-on-shears: true
     allow-transparent-blocks-in-enchantment-box: false
     anvil:
       allow-unsafe-enchants: false
