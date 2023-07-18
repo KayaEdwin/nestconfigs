@@ -18,7 +18,7 @@ enable-async-mob-spawning: true
 # Optimizes entity brains when
 # they're far away from the player
 dab:
-  enabled: true
+  enabled: false
   start-distance: 12
   max-tick-freq: 20
   activation-dist-mod: 8
